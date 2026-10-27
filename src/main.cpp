@@ -388,7 +388,7 @@ private:
         CCPoint verts[N];
         for (int i = 0; i < N; i++) {
             float a = static_cast<float>(i) / N * 6.2831853f;
-            verts[i] = {center.x + std::cos(a) * radius, center.y + std::sin(a) * radius};
+                verts[i] = CCPoint(center.x + std::cos(a) * radius, center.y + std::sin(a) * radius);
         }
         this->drawPolygon(verts, N, {0.f, 0.f, 0.f, 0.f}, width, col);
     }
