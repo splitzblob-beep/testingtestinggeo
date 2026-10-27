@@ -1,0 +1,59 @@
+{
+	"geode": "5.11.2",
+	"gd": {
+		"win": "2.2081"
+	},
+	"id": "practice.click-guide",
+	"name": "Click Guide",
+	"version": "v1.0.0",
+	"developer": "Practice",
+	"description": "Shows where to click in the level, learned from your own good runs, so you can learn the click pattern.",
+	"settings": {
+		"enabled": {
+			"type": "bool",
+			"name": "Show markers",
+			"description": "Draw the saved click guide in the level.",
+			"default": true
+		},
+		"record": {
+			"type": "bool",
+			"name": "Learn from my runs",
+			"description": "Record your clicks and update the guide when you get further than before. Turn off to keep the current guide frozen.",
+			"default": true
+		},
+		"only-practice": {
+			"type": "bool",
+			"name": "Only learn in practice mode",
+			"description": "Only update the guide from practice-mode attempts.",
+			"default": false
+		},
+		"approach-ring": {
+			"type": "bool",
+			"name": "Approach ring",
+			"description": "A ring around the next click that shrinks onto it as you get close, so you can see the timing coming.",
+			"default": true
+		},
+		"show-attempt": {
+			"type": "bool",
+			"name": "Show my clicks this attempt",
+			"description": "Faint white marks where you actually clicked this attempt, to compare against the guide.",
+			"default": true
+		},
+		"lookahead": {
+			"type": "int",
+			"name": "How far ahead to show",
+			"description": "How far ahead of your icon markers appear, in units (one block = 30).",
+			"default": 450,
+			"min": 150,
+			"max": 1500
+		},
+		"death-margin": {
+			"type": "int",
+			"name": "Mistake buffer",
+			"description": "When you die, clicks this close before the death (in units, one block = 30) are not saved, because that's usually where the mistake was.",
+			"default": 90,
+			"min": 0,
+			"max": 300
+		}
+	}
+}

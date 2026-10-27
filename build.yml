@@ -1,0 +1,25 @@
+name: Build Click Guide
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  build:
+    name: Windows
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build the mod
+        uses: geode-sdk/build-geode-mod@main
+        id: build
+        with:
+          sdk: v5.11.2
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: click-guide
+          path: ${{ steps.build.outputs.build-output }}
